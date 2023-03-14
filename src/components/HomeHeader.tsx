@@ -5,10 +5,10 @@ export default function HomeHeader() {
   return (
     <header className="min-w-[380px] flex justify-end p-[6px]">
       <div className="h-12 flex justify-end items-center space-x-4 px-3 ">
-        <Link className="link" href="https://mail.google.com">
+        <Link className="link" target="_blank" href="https://mail.google.com">
           Gmail
         </Link>
-        <Link className="link" href="https://images.google.com">
+        <Link className="link" target="_blank" href="https://images.google.com">
           Images
         </Link>
         <CgMenuGridO className="text-4xl rounded-full bg-transparent hover:bg-gray-900/10 p-[6px]" />

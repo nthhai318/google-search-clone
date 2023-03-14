@@ -4,7 +4,7 @@ import { utilityLinks, businessLinks } from "../constants/Homepage";
 
 export default function Footer() {
   return (
-    <footer className="text-[#70757a] bg-[#f2f2f2] relative bottom-0 w-full min-w-[380px] flex flex-col">
+    <footer className="text-[#70757a] bg-[#f2f2f2] absolute bottom-0 w-full min-w-[380px] flex flex-col">
       {/* FAILED TO FETCH CLIENT COUNTRY OF ORIGIN DUE TO PRIVACY PROBLEMS */}
 
       {/* <div className="px-8 py-3 flex justify-center sm:justify-start border-b-[1px]">
