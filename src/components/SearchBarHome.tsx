@@ -38,7 +38,7 @@ export function SearchBarHome() {
   }
 
   return (
-    <div className="flex flex-col w-full p-5 items-center">
+    <div className="flex flex-col min-w-[350px] w-full p-5 xs:items-center">
       <form
         onSubmit={handleSearch}
         className="flex w-full p-1 max-h-40 max-w-xl rounded-full border hover:shadow-[0_1px_6px_rgba(32,33,36,.28)] focus-within:shadow-[0_1px_6px_rgba(32,33,36,.28)]"
@@ -59,7 +59,7 @@ export function SearchBarHome() {
           <AiOutlineCamera className="m-2 text-[1.25rem]" />
         </button>
       </form>
-      <div className="pt-5  flex flex-col xs:flex-row justify-center">
+      <div className="pt-5  flex flex-col xs:flex-row items-center justify-center">
         <button className="btn" onClick={handleSearch}>
           Google Search
         </button>

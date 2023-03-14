@@ -12,4 +12,7 @@
   .lds-ring:after {
     @apply content-[""] block w-[1rem] h-[1rem] rounded-[50%] border-[2px] border-y-current border-x-transparent animate-spin;
   }
+  .link {
+    @apply hover:underline pb-[2px];
+  }
 }

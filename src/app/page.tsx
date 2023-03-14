@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import HomeHeader from "@/components/HomeHeader";
 import { SearchBarHome } from "@/components/SearchBarHome";
 import { Roboto } from "next/font/google";
@@ -16,9 +17,10 @@ export default function Home() {
           width={272}
           height={92}
           src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
-          className="mt-[20vh]"
+          className="mt-[20vh] min-w-fit"
         ></Image>
         <SearchBarHome />
+        <Footer />
       </main>
     </>
   );
