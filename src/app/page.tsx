@@ -16,7 +16,7 @@ export default function Home() {
           width={272}
           height={92}
           src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
-          className="mt-48"
+          className="mt-[20vh]"
         ></Image>
         <SearchBarHome />
       </main>
