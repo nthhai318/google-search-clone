@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  overflow: -moz-scrollbars-vertical;
+  overflow-y: scroll;
+}
+
 @layer components {
   .btn {
     @apply rounded-md bg-[#f8f9fa] border border-[#f8f9fa] px-4 leading-8 my-3 mx-1 hover:shadow-[0_1px_1px_rgba(0,0,0,.1)] hover:border-[#dadce0] flex items-center justify-center text-center w-fit min-w-[20ch];
