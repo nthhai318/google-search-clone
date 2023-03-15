@@ -1,4 +1,4 @@
-import SearchResult from "@/components/SearchResult";
+import WebSearchResult from "@/components/WebSearchResult";
 import Link from "next/link";
 import {} from "next/navigation";
 
@@ -68,5 +68,5 @@ export default async function Page({
     );
   }
 
-  return <div>{data && <SearchResult results={data} />}</div>;
+  return <div>{data && <WebSearchResult results={data} />}</div>;
 }

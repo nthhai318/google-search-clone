@@ -2,7 +2,7 @@ import { SearchData } from "@/app/search/web/page";
 import Link from "next/link";
 import Parser from "html-react-parser";
 
-export default function SearchResult({ results }: { results: SearchData }) {
+export default function WebSearchResult({ results }: { results: SearchData }) {
   const currentPage =
     Math.floor(results.queries.request[0].startIndex / 10) + 1;
   return (
