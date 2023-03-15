@@ -11,7 +11,7 @@ export default function SearchOptions() {
   }
 
   return (
-    <div className="ml-7 lg:ml-[180px] flex gap-5 items-end mt-2">
+    <div className="ml-7 md:ml-[194px] flex gap-5 items-end mt-2">
       <button
         className={`p-2 flex gap-2 items-center border-b-2 ${
           current === "web" ? " border-blue-700" : "border-transparent"

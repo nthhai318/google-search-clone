@@ -27,7 +27,7 @@ export default function SearchBar() {
 
   return (
     <div
-      className={`flex w-[576px] p-1 max-w-xl rounded-[20px] border hover:shadow-[0_1px_6px_rgba(32,33,36,.28)] focus-within:shadow-[0_1px_6px_rgba(32,33,36,.28)] ${
+      className={`flex self-stretch mx-3 flex-grow min-w-[330px] p-1 max-w-2xl rounded-[20px] border hover:shadow-[0_1px_6px_rgba(32,33,36,.28)] focus-within:shadow-[0_1px_6px_rgba(32,33,36,.28)] ${
         searchInput ? "shadow-[0_1px_6px_rgba(32,33,36,.28)]" : ""
       }`}
     >
@@ -39,7 +39,7 @@ export default function SearchBar() {
           onChange={(e) => {
             setSearchInput(e.target.value);
           }}
-          className="flex-1 p-1 outline-none"
+          className="flex-1 w-[30px] p-1 outline-none"
         />
         {searchInput && (
           <div onClick={() => setSearchInput("")}>

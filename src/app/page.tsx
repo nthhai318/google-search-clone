@@ -10,7 +10,7 @@ export default function Home() {
     <div className="flex flex-col justify-between">
       <HomeHeader />
 
-      <main className="flex flex-col items-center min-h-[80vh] justify-center  min-w-[380px]">
+      <main className="flex h-full flex-col items-center min-h-[80vh] justify-center  min-w-[380px]">
         <Image
           alt="google-logo"
           width={272}

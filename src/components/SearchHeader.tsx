@@ -9,8 +9,8 @@ import SearchOptions from "./SearchOpts";
 export default function SearchHeader() {
   return (
     <header className="flex flex-col border-b-2">
-      <div className="flex items-center justify-between pt-5">
-        <div className="flex gap-5 items-center">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-between md:pt-5 ">
+        <div className="flex flex-col md:flex-row self-stretch flex-1 gap-5 items-center">
           <Link href="/">
             <Image
               alt="google-logo"
@@ -22,7 +22,7 @@ export default function SearchHeader() {
           </Link>
           <SearchBar />
         </div>
-        <div className="h-12 flex justify-end items-center space-x-4 px-3 ">
+        <div className="h-12 self-end flex justify-end items-center space-x-4 px-3 ">
           <Link className="link" target="_blank" href="https://mail.google.com">
             Gmail
           </Link>

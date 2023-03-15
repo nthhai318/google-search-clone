@@ -1,7 +1,7 @@
 export default function Page() {
   return (
     <>
-      <div>Search Page</div>
+      <div>Image Search Page</div>
     </>
   );
 }

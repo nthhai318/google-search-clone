@@ -7,6 +7,7 @@ specifiers:
   autoprefixer: ^10.4.14
   eslint: 8.36.0
   eslint-config-next: 13.2.4
+  html-react-parser: ^3.0.12
   next: 13.2.4
   postcss: ^8.4.21
   react: 18.2.0
@@ -22,6 +23,7 @@ dependencies:
   autoprefixer: 10.4.14_postcss@8.4.21
   eslint: 8.36.0
   eslint-config-next: 13.2.4_vgl77cfdswitgr47lm5swmv43m
+  html-react-parser: 3.0.12_react@18.2.0
   next: 13.2.4_biqbaboplfbrettd7655fr4n2y
   postcss: 8.4.21
   react: 18.2.0
@@ -748,6 +750,33 @@ packages:
       esutils: 2.0.3
     dev: false
 
+  /dom-serializer/2.0.0:
+    resolution: {integrity: sha512-wIkAryiqt/nV5EQKqQpo3SToSOV9J0DnbJqwK7Wv/Trc92zIAYZ4FlMu+JPFW1DfGFt81ZTCGgDEabffXeLyJg==}
+    dependencies:
+      domelementtype: 2.3.0
+      domhandler: 5.0.3
+      entities: 4.4.0
+    dev: false
+
+  /domelementtype/2.3.0:
+    resolution: {integrity: sha512-OLETBj6w0OsagBwdXnPdN0cnMfF9opN69co+7ZrbfPGrdpPVNBUj02spi6B1N7wChLQiPn4CSH/zJvXw56gmHw==}
+    dev: false
+
+  /domhandler/5.0.3:
+    resolution: {integrity: sha512-cgwlv/1iFQiFnU96XXgROh8xTeetsnJiDsTc7TYCLFd9+/WNkIqPTxiM/8pSd8VIrhXGTf1Ny1q1hquVqDJB5w==}
+    engines: {node: '>= 4'}
+    dependencies:
+      domelementtype: 2.3.0
+    dev: false
+
+  /domutils/3.0.1:
+    resolution: {integrity: sha512-z08c1l761iKhDFtfXO04C7kTdPBLi41zwOZl00WS8b5eiaebNpY00HKbztwBq+e3vyqWNwWF3mP9YLUeqIrF+Q==}
+    dependencies:
+      dom-serializer: 2.0.0
+      domelementtype: 2.3.0
+      domhandler: 5.0.3
+    dev: false
+
   /electron-to-chromium/1.4.328:
     resolution: {integrity: sha512-DE9tTy2PNmy1v55AZAO542ui+MLC2cvINMK4P2LXGsJdput/ThVG9t+QGecPuAZZSgC8XoI+Jh9M1OG9IoNSCw==}
     dev: false
@@ -762,6 +791,11 @@ packages:
     dependencies:
       graceful-fs: 4.2.10
       tapable: 2.2.1
+    dev: false
+
+  /entities/4.4.0:
+    resolution: {integrity: sha512-oYp7156SP8LkeGD0GF85ad1X9Ai79WtRsZ2gxJqtBuzH+98YUV6jkHEKlZkMbcrjJjIVJNIDP/3WL9wQkoPbWA==}
+    engines: {node: '>=0.12'}
     dev: false
 
   /es-abstract/1.21.2:
@@ -1380,6 +1414,34 @@ packages:
       function-bind: 1.1.1
     dev: false
 
+  /html-dom-parser/3.1.5:
+    resolution: {integrity: sha512-9KTy2C7G7OcDDvnJ3Y7np84RF3OuO7X0PE5ZXyrNdOTI9NYam8thaUtxGEIM5lUqJkJR8T1aVe+zlN6H4PCtuA==}
+    dependencies:
+      domhandler: 5.0.3
+      htmlparser2: 8.0.1
+    dev: false
+
+  /html-react-parser/3.0.12_react@18.2.0:
+    resolution: {integrity: sha512-eOXg0EvKhXjYjljd8gtBPzL8Pqf49uRrb9JAjYLlqYFr95E+HoCvGt0/w0J1E/fR1ArsEMWY+K6M4/wUuvaQ5Q==}
+    peerDependencies:
+      react: 0.14 || 15 || 16 || 17 || 18
+    dependencies:
+      domhandler: 5.0.3
+      html-dom-parser: 3.1.5
+      react: 18.2.0
+      react-property: 2.0.0
+      style-to-js: 1.1.3
+    dev: false
+
+  /htmlparser2/8.0.1:
+    resolution: {integrity: sha512-4lVbmc1diZC7GUJQtRQ5yBAeUCL1exyMwmForWkRLnwyzWBFxN633SALPMGYaWZvKe9j1pRZJpauvmxENSp/EA==}
+    dependencies:
+      domelementtype: 2.3.0
+      domhandler: 5.0.3
+      domutils: 3.0.1
+      entities: 4.4.0
+    dev: false
+
   /ignore/5.2.4:
     resolution: {integrity: sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ==}
     engines: {node: '>= 4'}
@@ -1407,6 +1469,10 @@ packages:
 
   /inherits/2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
+    dev: false
+
+  /inline-style-parser/0.1.1:
+    resolution: {integrity: sha512-7NXolsK4CAS5+xvdj5OMMbI962hU/wvwoxk+LWR9Ek9bVtyuuYScDN6eS0rUm6TxApFpw7CX1o4uJzcd4AyD3Q==}
     dev: false
 
   /internal-slot/1.0.5:
@@ -2065,6 +2131,10 @@ packages:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: false
 
+  /react-property/2.0.0:
+    resolution: {integrity: sha512-kzmNjIgU32mO4mmH5+iUyrqlpFQhF8K2k7eZ4fdLSOPFrD1XgEuSBv9LDEgxRXTMBqMd8ppT0x6TIzqE5pdGdw==}
+    dev: false
+
   /react/18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
     engines: {node: '>=0.10.0'}
@@ -2261,6 +2331,18 @@ packages:
   /strip-json-comments/3.1.1:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
+    dev: false
+
+  /style-to-js/1.1.3:
+    resolution: {integrity: sha512-zKI5gN/zb7LS/Vm0eUwjmjrXWw8IMtyA8aPBJZdYiQTXj4+wQ3IucOLIOnF7zCHxvW8UhIGh/uZh/t9zEHXNTQ==}
+    dependencies:
+      style-to-object: 0.4.1
+    dev: false
+
+  /style-to-object/0.4.1:
+    resolution: {integrity: sha512-HFpbb5gr2ypci7Qw+IOhnP2zOU7e77b+rzM+wTzXzfi1PrtBCX0E7Pk4wL4iTLnhzZ+JgEGAhX81ebTg/aYjQw==}
+    dependencies:
+      inline-style-parser: 0.1.1
     dev: false
 
   /styled-jsx/5.1.1_react@18.2.0:
