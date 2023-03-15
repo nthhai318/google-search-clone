@@ -1,7 +1,7 @@
 import ImageSearchResult from "@/components/ImageSearchResult";
 import PageNo from "@/components/pageNo";
 import Link from "next/link";
-import { SearchData } from "../web/page";
+import { SearchData } from "../web/page.tsx";
 
 export type SearchResultsImage = {
   title: string;

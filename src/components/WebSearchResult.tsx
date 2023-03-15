@@ -15,8 +15,8 @@ export default function WebSearchResult({ results }: { results: SearchData }) {
         </p>
       </div>
       <div className="my-5 flex flex-col gap-8">
-        {results.items.map((result) => (
-          <div key={result.link}>
+        {results.items.map((result, idx) => (
+          <div key={`${result.link} ${idx}`}>
             <Link className="group" href={result.link}>
               <p className="text-[1.5rem] text-[#1a0dab] group-hover:underline">
                 {Parser(result.htmlTitle)}
