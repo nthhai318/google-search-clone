@@ -1,19 +1,7 @@
 import ImageSearchResult from "@/components/ImageSearchResult";
+import PageNo from "@/components/pageNo";
 import Link from "next/link";
-import {} from "next/navigation";
-
-export type SearchDataImage = {
-  queries: {
-    request: {
-      startIndex: number;
-    }[];
-  };
-  searchInformation: {
-    formattedSearchTime: string;
-    formattedTotalResults: string;
-  };
-  items: SearchResultsImage;
-};
+import { SearchData } from "../web/page";
 
 export type SearchResultsImage = {
   title: string;
@@ -60,7 +48,7 @@ export default async function Page({
     console.log(res);
     throw new Error("Cannot return search result");
   }
-  const data: SearchDataImage = await res.json();
+  const data: SearchData = await res.json();
 
   if (data.searchInformation.formattedTotalResults == "0") {
     return (
@@ -78,5 +66,10 @@ export default async function Page({
     );
   }
 
-  return <div>{data && <ImageSearchResult results={data} />}</div>;
+  return (
+    <div>
+      {data && <ImageSearchResult results={data} />}
+      {data && <PageNo results={data} />}
+    </div>
+  );
 }

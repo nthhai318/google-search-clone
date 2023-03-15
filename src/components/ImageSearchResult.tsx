@@ -1,13 +1,16 @@
-import { SearchDataImage } from "@/app/search/image/page";
+import { SearchData } from "@/app/search/web/page";
 import Link from "next/link";
 import Image from "next/image";
-import Parser from "html-react-parser";
 
 export default function ImageSearchResult({
   results,
 }: {
-  results: SearchDataImage;
+  results: SearchData;
 }) {
+  const obj = results.items[0];
+  console.log(typeof obj);
+  obj.hasOwnProperty;
+
   const currentPage =
     Math.floor(results.queries.request[0].startIndex / 10) + 1;
   return (
@@ -20,20 +23,22 @@ export default function ImageSearchResult({
         </p>
       </div>
       <div className="my-5 flex flex-wrap gap-5">
-        {results.items.map((result) => (
+        {results.items.map((result, idx) => (
           <div
-            key={result.link}
+            key={`${result.link} ${idx}`}
             className="max-h-[228px] w-fit max-w-[300px] overflow-hidden"
           >
             <Link href={result.link}>
               <div className="h-[180px] w-fit flex items-center justify-center">
-                <Image
-                  src={result.link}
-                  height={result.image.height}
-                  width={result.image.width}
-                  alt={result.snippet}
-                  className="max-h-[180px] w-auto rounded-md"
-                />
+                {"image" in result && (
+                  <Image
+                    src={result.link}
+                    height={result.image.height}
+                    width={result.image.width}
+                    alt={result.snippet}
+                    className="max-h-[180px] w-auto rounded-md"
+                  />
+                )}
               </div>
             </Link>
             <div className="relative group w-full h-[48px] overflow-hidden">

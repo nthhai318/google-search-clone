@@ -11,7 +11,6 @@ import { FormEvent, useState } from "react";
 
 export default function SearchBar() {
   const router = useRouter();
-  const pathname = usePathname();
   const query = useSearchParams().get("query") ?? "";
   const [searchInput, setSearchInput] = useState(query);
 

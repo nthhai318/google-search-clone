@@ -1,18 +1,25 @@
+import PageNo from "@/components/pageNo";
 import WebSearchResult from "@/components/WebSearchResult";
 import Link from "next/link";
 import {} from "next/navigation";
+import { SearchResultsImage } from "../image/page";
 
 export type SearchData = {
   queries: {
     request: {
       startIndex: number;
+      title: string;
+      totalResults: number;
+      searchTerms: string;
+      searchType?: string;
     }[];
   };
   searchInformation: {
     formattedSearchTime: string;
     formattedTotalResults: string;
+    totalResults: number;
   };
-  items: SearchResults;
+  items: SearchResults | SearchResultsImage;
 };
 
 export type SearchResults = {
@@ -59,8 +66,20 @@ export default async function Page({
           That&apos;s preposterous!! There is no such thing on the Internet
         </p>
         <p>
-          Maybe you wanna try going back{" "}
-          <Link href="/" className="text-blue-500">
+          We haven&apos;t had spell checking feature yet! You may want to check
+          your spell again (perhaps using real{" "}
+          <Link
+            target="_blank"
+            className="text-blue-500 font-bold"
+            href="https://google.com"
+          >
+            Google
+          </Link>
+          ?)
+        </p>
+        <p>
+          Or perhaps you may wanna try going back{" "}
+          <Link href="/" className="text-blue-500 font-bold">
             Home
           </Link>
         </p>
@@ -68,5 +87,10 @@ export default async function Page({
     );
   }
 
-  return <div>{data && <WebSearchResult results={data} />}</div>;
+  return (
+    <div>
+      {data && <WebSearchResult results={data} />}
+      {data && <PageNo results={data} />}
+    </div>
+  );
 }
