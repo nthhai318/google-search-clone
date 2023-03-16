@@ -20,6 +20,7 @@ export type SearchData = {
     totalResults: number;
   };
   items: SearchResults | SearchResultsImage;
+  error?: object;
 };
 
 export type SearchResults = {
@@ -47,7 +48,7 @@ export default async function Page({
     startIndex = startIndex[-1];
   }
 
-  let query = searchParams?.query ?? "";
+  let query = searchParams?.query ?? " ";
   if (typeof query === "object") {
     query = query.join(" ");
   }
@@ -56,6 +57,7 @@ export default async function Page({
   if (!res.ok) {
     throw new Error("Cannot return search result");
   }
+
   const data: SearchData = await res.json();
 
   if (data.searchInformation.formattedTotalResults == "0") {
