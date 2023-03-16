@@ -38,7 +38,7 @@ export default async function Page({
     startIndex = startIndex[-1];
   }
 
-  let query = searchParams?.query ?? "";
+  let query = searchParams?.query ?? " ";
   if (typeof query === "object") {
     query = query.join(" ");
   }
