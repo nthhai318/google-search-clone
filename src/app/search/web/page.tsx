@@ -50,8 +50,9 @@ export default async function Page({
 
   let query = searchParams?.query ?? " ";
   if (typeof query === "object") {
-    query = query.join(" ");
+    query = query.join("");
   }
+  console.log(query);
   console.log(searchUrl(query, startIndex));
   const res = await fetch(searchUrl(query, startIndex));
   if (!res.ok) {
