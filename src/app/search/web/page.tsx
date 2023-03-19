@@ -47,7 +47,7 @@ export default async function Page({
   if (typeof startIndex === "object") {
     startIndex = startIndex[-1];
   }
-
+  console.log(searchParams);
   let query = searchParams?.query ?? " ";
   if (typeof query === "object") {
     query = query.join("");
