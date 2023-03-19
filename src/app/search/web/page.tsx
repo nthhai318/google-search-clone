@@ -52,7 +52,7 @@ export default async function Page({
   if (typeof query === "object") {
     query = query.join(" ");
   }
-
+  console.log(searchUrl(query, startIndex));
   const res = await fetch(searchUrl(query, startIndex));
   if (!res.ok) {
     throw new Error("Cannot return search result");

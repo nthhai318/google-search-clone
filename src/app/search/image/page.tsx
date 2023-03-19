@@ -45,7 +45,6 @@ export default async function Page({
 
   const res = await fetch(searchUrl(query, startIndex));
   if (!res.ok) {
-    console.log(res);
     throw new Error("Cannot return search result");
   }
   const data: SearchData = await res.json();
