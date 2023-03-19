@@ -25,6 +25,8 @@ export type SearchResultsImage = {
   };
 }[];
 
+export const dynamic = "force-dynamic";
+
 const searchUrl = (query: string, startIndex: string) =>
   `https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=${process.env.GOOGLE_CONTEXT_KEY}&q=${query}&start=${startIndex}&searchType=image&`;
 
