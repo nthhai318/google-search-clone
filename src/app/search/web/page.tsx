@@ -49,13 +49,12 @@ export default async function Page({
   if (typeof startIndex === "object") {
     startIndex = startIndex[-1];
   }
-  console.log(searchParams);
-  let query = searchParams?.query ?? "somethingiswrong";
+
+  let query = searchParams?.query ?? "";
   if (typeof query === "object") {
-    query = query.join("");
+    query = query.join(" ");
   }
-  console.log(query);
-  console.log(searchUrl(query, startIndex));
+
   const res = await fetch(searchUrl(query, startIndex));
   if (!res.ok) {
     throw new Error("Cannot return search result");
