@@ -1,11 +1,7 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## LiveDemo [Google Search Mimic](https://gg-search-mimic.vercel.app/)
 
 This website is created using Nextjs13 app directory.
-
-
-## LiveDemo
-
-Live demo of this site: [Google Search Mimic](https://gg-search-mimic.vercel.app/)
 
 Due to limit quota for free account of 100 searches/day, you may experience over quota causing no result return.
 
